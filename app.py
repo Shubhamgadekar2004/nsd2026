@@ -126,6 +126,29 @@ with col3:
     - 🥉 3rd: ₹1000/-
     """)
 
+# ================= COMPETITION POSTERS =================
+st.markdown("---")
+st.subheader("📢 Competition Posters")
+
+poster_col1, poster_col2, poster_col3 = st.columns(3)
+
+with poster_col1:
+    quiz_poster = Path(__file__).parent / "1000157223.png"
+    if quiz_poster.exists():
+        st.image(str(quiz_poster), caption="🧠 Quiz Competition", use_container_width=True)
+
+with poster_col2:
+    model_poster = Path(__file__).parent / "1000157218.png"
+    if model_poster.exists():
+        st.image(str(model_poster), caption="🔬 Model Exhibition Competition", use_container_width=True)
+
+with poster_col3:
+    drawing_poster = Path(__file__).parent / "1000157214.png"
+    if drawing_poster.exists():
+        st.image(str(drawing_poster), caption="🎨 Drawing Competition", use_container_width=True)
+
+st.markdown("---")
+
 # ================= REGISTRATION FEES =================
 st.subheader("💰 Registration Fees")
 
