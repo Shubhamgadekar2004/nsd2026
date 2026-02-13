@@ -141,41 +141,63 @@ st.success("🏆 **Winner Shield will be awarded to the Best School**")
 
 # ================= REGISTRATION =================
 st.subheader("📝 Registration")
-# ================= SIMPLE BIG BUTTON =================
+
 st.markdown("""
 <style>
-.simple-register-btn {
-    text-align: center;
+.reg-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 30px 0;
 }
-.simple-register-btn a {
+.reg-btn {
     text-decoration: none;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
 }
-.simple-register-btn button {
-    background-color: #0056b3;
+.reg-btn button {
+    width: 100%;
     color: white;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 16px 36px;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
-.simple-register-btn button:hover {
-    background-color: #003f7f;
+.reg-btn button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.btn-drawing { 
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+.btn-model { 
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+.btn-quiz { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 </style>
 
-<div class="simple-register-btn">
-    <a href="https://forms.gle/ckh9yXvdWREnFgrCA" target="_blank">
-        <button>📌 Register Now</button>
+<div class="reg-buttons-container">
+    <a class="reg-btn" href="https://forms.gle/z6ZBtfDDAccr4QYg8" target="_blank">
+        <button class="btn-drawing">🎨 Register: Drawing Competition</button>
+    </a>
+    <a class="reg-btn" href="https://forms.gle/dPBJZgMQuoXLRdQ89" target="_blank">
+        <button class="btn-model">🔬 Register: Model Exhibition</button>
+    </a>
+    <a class="reg-btn" href="https://forms.gle/r7VFXAgsGxQfpu4D6" target="_blank">
+        <button class="btn-quiz">🧠 Register: Quiz Competition</button>
     </a>
 </div>
 """, unsafe_allow_html=True)
 
-
-
-st.info("👉 Registration link will be updated soon.")
+st.success("✅ Registration is now open! Click a button above to register for your chosen competition.")
 
 # ============ ORGANIZING COMMITTEE ============
 st.subheader("👥 Organizing Committee")
